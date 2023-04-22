@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+:root {
+    --base-color: #e5e5e5;
+    --alt-color: #0a3671;
+    --alt2-color: #89a7cf;
+}
+
+body {
+    background-color: var(--base-color);
+}
+.container {
+    padding: 1rem;
+    overflow-x: hidden;
+}
+header {
+    position: relative;
+}
+
+header .logo {
+    margin-top: 8px;
+    margin-bottom: 5rem;
+}
+
+
+main .input {
+    margin-bottom: 100px;
+}
+
+.input textarea {
+    font-size: 32px;
+    resize: none;
+    border: none;
+    outline: none;
+    background-color: var(--base-color);
+    color: var(--alt-color);
+    width: 100%;
+
+}
+
+.input textarea::placeholder {
+    color: var(--alt2-color);
+}
+
+main .notice {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 1rem;
+}
+
+.notice p {
+    font-size: 14px;
+}
+
+main .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-bottom: 80px;
+}
+
+.button {
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all .3s;
+    font-weight: 500;
+}
+.button:hover {
+    filter: brightness(1.2);
+}
+.button:active {
+    transform: scale(.99);
+}
+.buttons button.blue {
+    background-color: var(--alt-color);
+    color: white;
+}
+
+button.white {
+   background-color: #fff;
+   color: var(--alt-color);
+   border: 2px solid rgba(000, 000, 255, 50%);
+   
+}
+#two {
+    width: 100%;  
+    padding: 32px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 1.5rem;
+    box-shadow: 0px 24px 9px -30px #1d1d1d14;
+    margin-bottom: 40px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+main .result {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+.result .boy {
+    display: none;
+}
+
+.boy img {
+    width: 100%;
+}
+#two div.hidden {
+    display: none;
+}
+
+
+
+/* =========== Requests =======*/
+
+
+#two #section-requests {
+    height: 100%;
+}
+#two #requests {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 95%;
+    overflow-y:auto;
+}
+
+#section-requests #requests .request {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-weight: 500;
+    background-color: #e5e5e5;
+    padding: 1rem;
+    border-radius: 8px;
+    height: fit-content;
+}
+#section-requests h2 {
+    margin-bottom: 1.5rem;
+    color: var(--alt-color);
+}
+#two .request button {
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    transition: transform .2s;
+}
+#two .request button:active {
+    transform: scale(0.98);
+}
+
+#two #requests::-webkit-scrollbar-thumb {
+  background-color: red;
+}
+
+.request p {
+    font-size: 1.3rem;
+}
+/*=============TABLET================*/
+
+@media (min-width: 750px) {
+    .container {
+        padding: 2.5rem
+    }
+    main .buttons {
+        flex-direction: row;
+    }
+    .buttons button {
+        width: 100%;
+    }
+}
